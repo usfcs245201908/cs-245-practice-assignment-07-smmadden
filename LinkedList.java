@@ -78,10 +78,9 @@ public class LinkedList<T> implements List<T> {
 
     }
 
-    public T get(int pos){ // doesn't work // return the next of where you are if you go to prev, return head if pos 0
-        // start at head and return node at the position
+    public T get(int pos){
         Node node = head;
-        for(int i=0; i<=pos; i++){
+        for(int i=0; i<pos-1; i++){
             node = node.next;
         }
         return node.data;
